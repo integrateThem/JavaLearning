@@ -1,4 +1,4 @@
-package LabDers1.soru1_Mahalle;
+package LabDers1.soru1.Mahalle;
 
 public class Ev {
     protected String evSahibi="Er ailesi";

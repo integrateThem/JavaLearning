@@ -1,4 +1,4 @@
-package LabDers1.soru3_HayvanatBahcesi;
+package LabDers1.soru3;
 
 public class Kopek extends Hayvan{
     String tuyRengi;

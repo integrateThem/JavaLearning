@@ -1,4 +1,4 @@
-package LabDers1.soru2_kahve;
+package LabDers1.soru2;
 
 public class KahveMain {
     public static void main(String[] args) {

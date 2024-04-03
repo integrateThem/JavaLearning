@@ -1,4 +1,4 @@
-package LabDers1.soru2_kahve;
+package LabDers1.soru2;
 
 public class KontrolPaneli {
     int suMiktari=150;
