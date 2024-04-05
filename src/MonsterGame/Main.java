@@ -2,11 +2,11 @@ package MonsterGame;
 
 public class Main {
     public static void main(String[] args) {
-        FireMonster fire=new FireMonster();
-        WaterMonster water=new WaterMonster();
-        StoneMonster stone=new StoneMonster();
-        fire.attack();
-        water.attack();
-        stone.attack();
+        FireMonster fire1=new FireMonster();
+        FireMonster fire2=new FireMonster();
+        WaterMonster water1=new WaterMonster();
+        WaterMonster water2=new WaterMonster();
+
+
     }
 }
