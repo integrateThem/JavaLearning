@@ -6,8 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class HesapMakinesiEkranı {
+    static int sayi1,sayi2;
     public static void main(String[] args) {
-        int sayi1,sayi2;
         JFrame frame=new JFrame("Hesap Makinesi");
         Container pane=frame.getContentPane();
         frame.setLayout(null);
@@ -41,13 +41,40 @@ public class HesapMakinesiEkranı {
         sayiIki.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 sayi2=Integer.parseInt(sayiIki.getText());
             }
         });
         topla.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                sonuc.setText("asd");
+                int sonucIslem=sayi1+sayi2;
+                String islemSonucu=Integer.toString(sonucIslem);
+                sonuc.setText(islemSonucu);
+            }
+        });
+        cıkar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int sonucIslem=sayi1-sayi2;
+                String islemSonucu=Integer.toString(sonucIslem);
+                sonuc.setText(islemSonucu);
+            }
+        });
+        bol.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int sonucIslem=sayi1/sayi2;
+                String islemSonucu=Integer.toString(sonucIslem);
+                sonuc.setText(islemSonucu);
+            }
+        });
+        carp.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int sonucIslem=sayi1*sayi2;
+                String islemSonucu=Integer.toString(sonucIslem);
+                sonuc.setText(islemSonucu);
             }
         });
         frame.setSize(600,600);
