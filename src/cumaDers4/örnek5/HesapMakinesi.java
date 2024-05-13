@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HesapMakinesiEkranı {
+public class HesapMakinesi {
     static int sayi1,sayi2;
     public static void main(String[] args) {
         JFrame frame=new JFrame("Hesap Makinesi");
