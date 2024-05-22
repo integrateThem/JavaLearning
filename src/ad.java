@@ -11,7 +11,7 @@ public class ad {
         frame.setSize(600, 400);
         frame.setLayout(new BorderLayout());
 
-        // Table modeldasdsa
+        // Table modeldasdsaDASDASDAS
         DefaultTableModel model = new DefaultTableModel();
         model.addColumn("ID");
         model.addColumn("Name");
