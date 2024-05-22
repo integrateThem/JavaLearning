@@ -12,14 +12,14 @@ public class HesapMakinesi {
         Container pane=frame.getContentPane();
         frame.setLayout(null);
         JButton topla=new JButton("+");
-        JButton cıkar=new JButton("-");
+        JButton cikar=new JButton("-");
         JButton carp=new JButton("x");
         JButton bol=new JButton("/");
         JTextField sayiBir=new JTextField();
         JTextField sayiIki=new JTextField();
         JTextField sonuc=new JTextField();
         pane.add(topla);
-        pane.add(cıkar);
+        pane.add(cikar);
         pane.add(carp);
         pane.add(bol);
         pane.add(sayiBir);
@@ -28,10 +28,11 @@ public class HesapMakinesi {
         sayiBir.setBounds(30,30,200,50);
         sayiIki.setBounds(30,90,200,50);
         topla.setBounds(250,30,50,50);
-        cıkar.setBounds(250,90,50,50);
+        cikar.setBounds(250,90,50,50);
         carp.setBounds(250,150,50,50);
         bol.setBounds(250,210,50,50);
         sonuc.setBounds(30,150,200,50);
+        sonuc.setEditable(false);
         sayiBir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,7 +54,7 @@ public class HesapMakinesi {
                 sonuc.setText(islemSonucu);
             }
         });
-        cıkar.addActionListener(new ActionListener() {
+        cikar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int sonucIslem=sayi1-sayi2;
@@ -81,4 +82,31 @@ public class HesapMakinesi {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
+    private static String getTextWithLineWraps(JTextArea textArea) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            int start = 0;
+            int end;
+            int len = textArea.getDocument().getLength();
+            while (start < len) {
+                end = textArea.getLineEndOffset(textArea.getLineOfOffset(start));
+                String line = textArea.getText(start, end - start);
+                sb.append(line);
+                if (line.endsWith("\n")) {
+                    // Satır manuel olarak bitirildiyse
+                    sb.append("\n");
+                } else {
+                    // Satır sarmalaması varsa manuel olarak ekle
+                    if (end < len) {
+                        sb.append("\n");
+                    }
+                }
+                start = end;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
 }
+
